@@ -23,10 +23,9 @@ int	ft_printf(char const *str)
 	int i;
 
 	i = 0;
-	while(str[i])
+	if(str[i])
 	{
-		if (str[i] != '%')
-			write(1,&str[i],1);
+		ft_putstr_fd((char *)str, 1);
 		i++;
 	}
 	return (1);
