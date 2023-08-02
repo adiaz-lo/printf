@@ -12,13 +12,39 @@
 
 #include "ft_printf.h"
 
-/*int	ft_printf(char const *, ...)
+void	ft_conversion(char c, int *count)
 {
 	
+}
 
-}*/
+int	ft_printf(char const *str, ...)
+{
+	va_list 	args;
+	va_start	(args, str);
+	int			count;
+	int			i;
 
-int	ft_printf(char const *str)
+	count = 0;
+	i = 0;
+
+	while (str[i])
+	{
+		if (str[i] != '%')
+		{
+			write(1, &str[i], 1);
+			count++;
+		}
+		else if (str[i + 1])
+		{
+			ft_conversion(str[i + 1], &count);
+			i++;
+		}
+		i++;
+	}
+	return (count);
+}
+
+/*int	ft_printf(char const *str)
 {
 	int i;
 
@@ -29,4 +55,4 @@ int	ft_printf(char const *str)
 		i++;
 	}
 	return (1);
-}
+}*/
