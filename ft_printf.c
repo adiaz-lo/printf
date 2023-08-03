@@ -14,7 +14,24 @@
 
 void	ft_conversion(char c, int *count)
 {
-	
+	if (c == 'c')
+		*count += ft_print_c();
+	if (c == 's')
+		*count += ft_print_s();
+	if (c == 'p')
+		*count += ft_print_p();
+	if (c == 'd')
+		*count += ft_print_d();
+	if (c == 'i')
+		*count += ft_print_i();
+	if (c == 'u')
+		*count += ft_print_u();
+	if (c == 'x')
+		*count += ft_print_x();
+	if (c == 'X')
+		*count += ft_print_X();
+	if (c == '%')
+		*count += ft_print_pj();
 }
 
 int	ft_printf(char const *str, ...)
@@ -36,23 +53,10 @@ int	ft_printf(char const *str, ...)
 		}
 		else if (str[i + 1])
 		{
-			ft_conversion(str[i + 1], &count);
+			ft_conversion(str[i + 1], &count, str);
 			i++;
 		}
 		i++;
 	}
 	return (count);
 }
-
-/*int	ft_printf(char const *str)
-{
-	int i;
-
-	i = 0;
-	if(str[i])
-	{
-		ft_putstr_fd((char *)str, 1);
-		i++;
-	}
-	return (1);
-}*/
