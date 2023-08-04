@@ -24,9 +24,13 @@ LIB = ar -rcs
 
 RM = rm -f
 
-SRCS = ft_printf.c
+SRCS = ft_printf.c ft_print_c.c ft_print_s.c ft_print_p.c ft_print_i.c ft_print_u.c ft_print_x.c ft_print_X.c
 
 OBJS = $(SRCS:.c=.o)
+
+TEST = main.c
+
+TEST_OUT = ./a.out
 
 all : $(NAME)
 
@@ -45,5 +49,8 @@ clean :
 
 fclean : clean
 	$(RM) $(NAME)
+
+test : $(DEPS) $(SRCS) $(TEST) $(INCLUDE)
+	$(CC) $(CCFLAGS) $(SRCS) $(TEST) $(DEPS) && $(TEST_OUT)
 
 re : fclean $(NAME) all
