@@ -14,8 +14,13 @@ int	main()
 //	ft_printf("ft_printf:\nHola, me llamo Halfonso ñ.\n");
 //	ft_printf("ft_printf:\n\n");
 //	ft_printf("");
-	printf("ft_printf Characters Printed: %d\n", ft_printf("printf:\nHola, me llamo Halfonso ñ.\n"));
-	printf("%d", printf("%s", strn));
+	printf("ft_printf Characters Printed: %d\n", ft_printf("ft_printf:\nHola, me llamo Halfonso ñ.\n"));
+	//Test with char
+	printf("ft_printf Characters Printed: %d\n", ft_printf("ft_printf:\n%c\n", 'n'));
+	printf("printf Characters Printed: %d\n", printf("ft_printf:\n%c\n", 'n'));
+	//Test with NULL string
+	printf("%d\n", printf("%s", strn));
+	printf("%d\n", ft_printf("%s", strn));
 	//Test with variadic
 //	printf("%s\n", str);
 //	ft_printf("%s\n", str);

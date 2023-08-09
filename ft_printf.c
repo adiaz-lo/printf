@@ -14,10 +14,10 @@
 
 void	ft_conversion(char c, int *count, va_list args)
 {
-//	if (c == 'c')
-//		*count += ft_print_c(va_args(args, char));
-//	if (c == 's')
-//		*count += ft_print_s(va_args(args, char *));
+	if (c == 'c')
+		*count += ft_print_c(va_arg(args, int));
+	if (c == 's')
+		*count += ft_print_s(va_arg(args, char *));
 //	if (c == 'p')
 //		*count += ft_print_p(va_args(args, unsigned int));
 //	if (c == 'd' || c == 'i')

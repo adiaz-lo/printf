@@ -25,6 +25,7 @@
 
 int		ft_printf(char const *, ...);
 void	ft_conversion(char c, int *count, va_list args);
+int		ft_print_s(char	*str);
 int 	ft_print_c(char);
 int		ft_print_p(unsigned int);
 int		ft_print_i(int);
