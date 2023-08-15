@@ -10,8 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_print_p(unsigned int)
+#include "ft_printf.h"
+
+int	ft_print_p(unsigned long unum)
 {
-	
+	int	count;
+
+	if (unum == 0)
+		return(0);
+	count = 0;
 	return (count);
 }

@@ -18,18 +18,18 @@ void	ft_conversion(char c, int *count, va_list args)
 		*count += ft_print_c(va_arg(args, int));
 	if (c == 's')
 		*count += ft_print_s(va_arg(args, char *));
-//	if (c == 'p')
-//		*count += ft_print_p(va_args(args, unsigned int));
-//	if (c == 'd' || c == 'i')
-//		*count += ft_print_i(va_args(args, int));
-//	if (c == 'u')
-//		*count += ft_print_u(va_args(args, unsigned int));
-//	if (c == 'x')
-//		*count += ft_print_x(va_args(args, unsigned int));
-//	if (c == 'X')
-//		*count += ft_print_X(va_args(args, unsigned int));
-//	if (c == '%')
-//		*count += ft_print_c(char);
+	if (c == 'p')
+		*count += ft_print_p(va_arg(args, unsigned long));
+	if (c == 'i' || c == 'd')
+		*count += ft_print_i(va_arg(args, int));
+	if (c == 'u')
+		*count += ft_print_u(va_arg(args, unsigned int));
+	if (c == 'x')
+		*count += ft_print_x(va_arg(args, unsigned long));
+	if (c == 'X')
+		*count += ft_print_xX(va_arg(args, unsigned long));
+	if (c == '%')
+		*count += ft_print_c('%');
 }
 
 int	ft_printf(char const *str, ...)
