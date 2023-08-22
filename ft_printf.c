@@ -34,7 +34,7 @@ void	ft_conversion(char c, int *count, va_list args)
 
 int	ft_printf(char const *str, ...)
 {
-	va_list 	args;
+	va_list		args;
 	va_start	(args, str);
 	int			count;
 	int			i;

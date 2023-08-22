@@ -19,7 +19,7 @@ int	main()
 //	printf("printf:\nHola, me llamo Halfonso ñ.\n");
 //	printf("printf:\n\n");
 //	printf("printf:\n%s\n", str);
-	printf("printf Characters Printed: %d\n", printf("Hola, me llamo Halfonso ñ.\n"));
+//	printf("printf Characters Printed: %d\n", printf("Hola, me llamo Halfonso ñ.\n"));
 //	ft_printf("ft_printf:\nHola, me llamo Halfonso ñ.\n");
 //	ft_printf("ft_printf:\n\n");
 //	ft_printf("");
@@ -72,7 +72,9 @@ int	main()
 //	printf("%s\n", str);
 //	ft_printf("%s\n", str);
 //	Test of %
-	printf("Percentage test:%%\n");
-	ft_printf("Percentage test:%%\n");
-	return (0);
+	printf("printf Percentage test: %%\n");
+	ft_printf("ft_printf Percentage test: %%\n");
+//	int *p = 87;
+//	printf ("%x",&p);
+//	return (0);
 }

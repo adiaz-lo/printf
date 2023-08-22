@@ -26,7 +26,7 @@ int	ft_print_s(char	*str)
 	len = ft_strlen((const char *)str);
 	while (len)
 	{
-		write(1, &str , 1);
+		write(1, &str, 1);
 		count++;
 		len--;
 	}
