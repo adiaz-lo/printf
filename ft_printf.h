@@ -19,6 +19,8 @@
 # include <stdarg.h>
 # include "Libft/libft.h"
 
+#ifndef HEX
+# define HEX "0123456789ABCDF"
 
 
 //	MANDATORY

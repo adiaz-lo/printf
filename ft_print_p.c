@@ -16,8 +16,8 @@ int	ft_print_p(unsigned long unum)
 {
 	int	count;
 
-	if (unum == 0)
-		return (0);
 	count = 0;
+	if (unum == 0)
+		return (count);
 	return (count);
 }
