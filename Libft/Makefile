@@ -26,23 +26,30 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c f
 
 SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
+SRCS_EXTRA = ft_itoa_base.c
+
 OBJS = $(SRCS:.c=.o)
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
+OBJS_EXTRA = $(SRCS_EXTRA:.c=.o)
 
 all : $(NAME)
 
 %.o : %.c
 	$(CC) $(CCFLAGS) -c -o $@ $<
 
-$(NAME) : $(OBJS) $(INCLUDE)
-	$(LIB) $(NAME) $(OBJS)
+$(NAME) : $(OBJS) $(OBJS_BONUS) $(OBJS_EXTRA) $(INCLUDE)
+	$(LIB) $(NAME) $(OBJS) $(OBJS_BONUS) $(OBJS_EXTRA)
 
 bonus : $(OBJS_BONUS) $(INCLUDE)
 	$(LIB) $(NAME) $(OBJS_BONUS)
 
+extra : $(OBJS_EXTRA) $(INCLUDE)
+	$(LIB) $(NAME) $(OBJS_EXTRA)
+
 clean : 
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_BONUS) $(OBJS_EXTRA)
 
 fclean : clean
 	$(RM) $(NAME)

@@ -1,26 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 11:13:41 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/09/14 11:13:42 by adiaz-lo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_itoa_base(unsigned long nb, char * base)
+char	*ft_itoa_base(unsigned long nb, char *base)
 {
 	char			*hex;
 	unsigned long	nbr;
 	unsigned long	len;
-	
+
 	len = 0;
 	nbr = nb;
 	while (nb)
 	{
 		len++;
-		nb =/ 16;
+		nb /= 16;
 	}
 	if (nbr == 0)
 		len++;
 	hex = (char *)malloc(sizeof(char) * (len + 1));
 	hex[len] = '\0';
-	while (nbr != 0 | len)
+	while (nbr != 0 || len)
 	{
 		hex[--len] = base[nbr % 16];
-		nbr =/ 16;
+		nbr /= 16;
 	}
 	return (hex);
 }

@@ -67,7 +67,13 @@ int	main()
 	printf("double size is: %lu\n", sizeof(double));
 	//Test of pointer
 	printf("Test pointer: %p\n", &str);
-//	ft_printf("Test pointer: %p\n," &str);
+	ft_printf("ft_printf Test pointer: %p\n", &str);
+	//Test of hexadecimal
+	printf("Test hex: %x\n", 42);
+	ft_printf("ft_printf Test hex: %x\n", 42);
+	printf("Test hex: %x\n", 1984);
+	ft_printf("ft_printf Test hex: %x\n", 1984);
+
 	//Test with variadic
 //	printf("%s\n", str);
 //	ft_printf("%s\n", str);

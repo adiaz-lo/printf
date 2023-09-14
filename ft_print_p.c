@@ -14,10 +14,12 @@
 
 int	ft_print_p(unsigned long unum)
 {
-	int	count;
+//	int		count;
+	char	*str;
 
-	count = 0;
-	if (unum == 0)
-		return (count);
-	return (count);
+//	count = 0;
+	str = ft_itoa_base(unum, HEXL);
+		if (unum == 0)
+		return (0);
+	return (ft_print_s(str));
 }
