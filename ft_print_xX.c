@@ -2,9 +2,10 @@
 
 int	ft_print_xX(unsigned long num)
 {
-	int	count;
+	char	*str;
 
-	count = 0;
-	count = ft_putnbr_fd(num, 1);
-	return (count);
+	str = ft_itoa_base(num, HEXU);
+	ft_putstr_fd(str, 1);
+	free (str);
+	return (ft_strlen(str));
 }
