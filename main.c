@@ -73,7 +73,11 @@ int	main()
 	ft_printf("ft_printf Test hex: %x\n", 42);
 	printf("Test hex: %x\n", 1984);
 	ft_printf("ft_printf Test hex: %x\n", 1984);
-
+	//Test of uppercase hexadecimal
+	printf("Test upper hex: %X\n", 42);
+	ft_printf("ft_printf Test upper hex: %X\n", 42);
+	printf("Test upper hex: %X\n", 1984);
+	ft_printf("ft_printf Test upper hex: %X\n", 1984);
 	//Test with variadic
 //	printf("%s\n", str);
 //	ft_printf("%s\n", str);
