@@ -24,7 +24,7 @@ int	main()
 //	ft_printf("ft_printf:\nHola, me llamo Halfonso ñ.\n");
 //	ft_printf("ft_printf:\n\n");
 //	ft_printf("");
-	printf("ft_printf Characters Printed: %d\n", ft_printf("Hola, me llamo Halfonso ñ.\n"));
+/*	printf("ft_printf Characters Printed: %d\n", ft_printf("Hola, me llamo Halfonso ñ.\n"));
 	//Test with char
 	printf("ft_printf Characters Printed: %d\n", ft_printf("%c\n", 'n'));
 	printf("printf Characters Printed: %d\n", printf("%c\n", 'n'));
@@ -96,13 +96,15 @@ int	main()
 	ft_printf("\n");
 	//Test with variadic
 //	printf("%s\n", str);
-//	ft_printf("%s\n", str);
+//	ft_printf("%s\n", str);*/
 //	Test of %
-	printf("printf Percentage test: %%\n");
-	ft_printf("ft_printf Percentage test: %%\n");
+/*	printf("printf Percentage test: %%\n");
+	ft_printf("ft_printf Percentage test: %%\n");*/
 //	Mixed Tests
 	printf("printf %d\n", printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%\n", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42, -42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0));
 	printf("ft_printf %d\n", ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%\n", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0));
+//	printf("printf %d\n", printf("%%%c%%%s%%%d%%%i%%%u%%%% %%%c%%%s%%%d%%%i%%%u%%%%%%%c%%%s%%%d%%%i%%%u%%%% %c%%\n", 'A', "42", 42, 42 ,42, 'B', "-42", -42, -42 ,-42, 'C', "0", 0, 0 ,0, 0));
+//	printf("ft_printf %d\n", ft_printf("%%%c%%%s%%%d%%%i%%%u%%%% %%%c%%%s%%%d%%%i%%%u%%%%%%%c%%%s%%%d%%%i%%%u%%%% %c%%\n", 'A', "42", 42, 42 , 42, 'B', "-42", -42, -42 ,-42 , 'C', "0", 0, 0 ,0, 0));
 //	int *p = 87;
 //	printf ("%x",&p);
 //	return (0);
