@@ -14,8 +14,8 @@
 
 int	ft_putnbr_fd(int n, int fd)
 {
-	int	nb;
-	int	nprint;
+	long	nb;
+	int		nprint;
 
 	nb = n;
 	nprint = 0;
@@ -34,6 +34,5 @@ int	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(nb + '0', fd);
 		nprint++;
 	}
-	write (fd, &nb, nprint);
 	return (nprint);
 }

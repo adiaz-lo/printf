@@ -19,24 +19,24 @@
 # include <stdarg.h>
 # include "Libft/libft.h"
 
-#ifndef HEXL
-# define HEXL "0123456789abcdef"
-#endif
+# ifndef HEXL
+#  define HEXL "0123456789abcdef"
+# endif
 
-#ifndef HEXU
-# define HEXU "0123456789ABCDF"
-#endif
+# ifndef HEXU
+#  define HEXU "0123456789ABCDEF"
+# endif
 
 //	MANDATORY
 
-int		ft_printf(char const *, ...);
+int		ft_printf(char const *str, ...);
 void	ft_conversion(char c, int *count, va_list args);
 int		ft_print_s(char	*str);
-int 	ft_print_c(char);
-int		ft_print_p(unsigned long);
-int		ft_print_i(int);
-int		ft_print_u(unsigned int);
-int		ft_print_x(unsigned long);
-int		ft_print_xX(unsigned long);
+int		ft_print_c(char c);
+int		ft_print_p(unsigned long unum);
+int		ft_print_i(int num);
+int		ft_print_u(unsigned int num);
+int		ft_print_hexl(unsigned long num);
+int		ft_print_hexu(unsigned long num);
 
 #endif

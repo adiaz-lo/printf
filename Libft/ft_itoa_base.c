@@ -27,7 +27,7 @@ char	*ft_itoa_base(unsigned long nb, char *base)
 	}
 	if (nbr == 0)
 		len++;
-	hex = (char *)malloc(sizeof(char) * (len + 1));
+	hex = malloc(sizeof(char) * (len + 1));
 	hex[len] = '\0';
 	while (nbr != 0 || len)
 	{

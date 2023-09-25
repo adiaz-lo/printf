@@ -1,4 +1,5 @@
 #include "ft_printf.h"
+#include <limits.h>
 
 int	main()
 {
@@ -35,6 +36,14 @@ int	main()
 	ft_printf("ft_printf %%d Decimal test: %d\n", decimal);
 	printf("printf %%i Decimal test: %i\n", decimal);
 	ft_printf("ft_printf %%i Decimal test: %i\n", decimal);
+	printf("%d \n", printf(" %d ", 0));
+	printf("%d \n", ft_printf(" %d ", 0));
+	printf("%d \n", printf(" %d ", 2000));
+	printf("%d \n", ft_printf(" %d ", 2000));
+	printf("%d \n", printf(" %d ", -1));
+	printf("%d \n", ft_printf(" %d ", -1));
+	printf("printf %%i Decimal test: %i\n", -1);
+	ft_printf("ft_printf %%i Decimal test: %i\n", -1);
 	//Test of decimal unsigned number
 	printf("printf %%u Decimal test: %d\n", decimal);
 	printf("printf Decimal unsigned number printed: %d\n", printf("printf %%u Decimal test: %d\n", decimal));
@@ -73,17 +82,27 @@ int	main()
 	ft_printf("ft_printf Test hex: %x\n", 42);
 	printf("Test hex: %x\n", 1984);
 	ft_printf("ft_printf Test hex: %x\n", 1984);
+//	printf("Test hex: %x\n", LONG_MAX);
+	//ft_printf("ft_printf Test hex: %x\n", LONG_MAX);
 	//Test of uppercase hexadecimal
 	printf("Test upper hex: %X\n", 42);
 	ft_printf("ft_printf Test upper hex: %X\n", 42);
 	printf("Test upper hex: %X\n", 1984);
 	ft_printf("ft_printf Test upper hex: %X\n", 1984);
+	//Test with strings
+	printf("%s", "some string with %s hehe");
+	printf("\n");
+	ft_printf("%s", "some string with %s hehe");
+	ft_printf("\n");
 	//Test with variadic
 //	printf("%s\n", str);
 //	ft_printf("%s\n", str);
 //	Test of %
 	printf("printf Percentage test: %%\n");
 	ft_printf("ft_printf Percentage test: %%\n");
+//	Mixed Tests
+	printf("printf %d\n", printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%\n", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42, -42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0));
+	printf("ft_printf %d\n", ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%\n", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0));
 //	int *p = 87;
 //	printf ("%x",&p);
 //	return (0);

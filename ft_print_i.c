@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_i.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/25 08:39:29 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/09/25 08:39:31 by adiaz-lo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_print_i(int num)
@@ -5,6 +17,8 @@ int	ft_print_i(int num)
 	int	count;
 
 	count = 0;
-	count = ft_putnbr_fd(num, 1);
+	if (num < 0)
+		count += 1;
+	count += ft_putnbr_fd(num, 1);
 	return (count);
 }

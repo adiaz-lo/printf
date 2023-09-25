@@ -15,5 +15,5 @@
 int	ft_print_p(unsigned long unum)
 {
 	ft_putstr_fd("0x", 1);
-	return (ft_print_x(unum) + 2);
+	return (ft_print_hexl(unum) + 2);
 }

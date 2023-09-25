@@ -25,9 +25,9 @@ void	ft_conversion(char c, int *count, va_list args)
 	if (c == 'u')
 		*count += ft_print_u(va_arg(args, unsigned int));
 	if (c == 'x')
-		*count += ft_print_x(va_arg(args, unsigned long));
+		*count += ft_print_hexl(va_arg(args, unsigned long));
 	if (c == 'X')
-		*count += ft_print_xX(va_arg(args, unsigned long));
+		*count += ft_print_hexu(va_arg(args, unsigned long));
 	if (c == '%')
 		*count += ft_print_c('%');
 }
@@ -35,13 +35,12 @@ void	ft_conversion(char c, int *count, va_list args)
 int	ft_printf(char const *str, ...)
 {
 	va_list		args;
-	va_start	(args, str);
 	int			count;
 	int			i;
 
+	va_start(args, str);
 	count = 0;
 	i = 0;
-
 	while (str[i])
 	{
 		if (str[i] != '%')

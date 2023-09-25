@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_u.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/25 08:40:35 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/09/25 08:40:37 by adiaz-lo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_print_u(unsigned int num)
@@ -5,6 +17,6 @@ int	ft_print_u(unsigned int num)
 	int	count;
 
 	count = 0;
-	count = ft_putnbr_fd(num, 1);
+	count = ft_putnbr_fd_u(num, 1);
 	return (count);
 }
