@@ -6,7 +6,7 @@
 #    By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 12:42:32 by adiaz-lo          #+#    #+#              #
-#    Updated: 2023/04/24 15:44:17 by adiaz-lo         ###   ########.fr        #
+#    Updated: 2023/09/26 11:57:07 by adiaz-lo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = gcc
 
-CCFLAGS = -Wall -Werror -Wextra
+CCFLAGS = -g3 -Wall -Werror -Wextra
 
 INCLUDE = libft.h
 

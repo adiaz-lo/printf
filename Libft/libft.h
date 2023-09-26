@@ -79,5 +79,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	*ft_itoa_base(unsigned long nb, char *base);
 int		ft_putnbr_fd_u(long n, int fd);
 
-
 #endif
