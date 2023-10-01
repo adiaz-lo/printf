@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:13:41 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/10/01 18:56:40 by bvelasco         ###   ########.fr       */
+/*   Updated: 2023/10/01 19:09:08 by bvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char		*ft_itoa_base(unsigned long nb, char *base)
 {
-	char			*hex;
+	char			*result;
 	unsigned long	nbr;
 	unsigned long	len;
 	const size_t	base_len = ft_strlen(base);
@@ -28,12 +28,12 @@ char		*ft_itoa_base(unsigned long nb, char *base)
 	}
 	if (nbr == 0)
 		len++;
-	hex = malloc(sizeof(char) * (len + 1));
-	hex[len] = '\0';
+	result = malloc(sizeof(char) * (len + 1));
+	result[len] = '\0';
 	while (nbr != 0 || len)
 	{
-		hex[--len] = base[nbr % 16];
+		result[--len] = base[nbr % 16];
 		nbr /= base_len;
 	}
-	return (hex);
+	return (result);
 }

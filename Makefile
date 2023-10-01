@@ -6,7 +6,7 @@
 #    By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/21 12:49:56 by adiaz-lo          #+#    #+#              #
-#    Updated: 2023/09/26 11:56:36 by adiaz-lo         ###   ########.fr        #
+#    Updated: 2023/10/01 19:18:24 by bvelasco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,8 +54,5 @@ clean :
 
 fclean : clean
 	$(RM) $(NAME)
-
-test : $(DEPS) $(SRCS) $(TEST) $(INCLUDE)
-	$(CC) $(CCFLAGS) $(SRCS) $(TEST) $(DEPS) && $(TEST_OUT)
 
 re : fclean $(NAME) all
