@@ -20,7 +20,7 @@ DEPS = Libft/libft.a
 
 CC = clang
 
-CCFLAGS = -g3 -Wall -Werror -Wextra
+CCFLAGS = -g3 -Wall -Werror -Wextra -pedantic -O3 
 
 INCLUDE = ft_printf.h
 

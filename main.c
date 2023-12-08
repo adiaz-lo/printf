@@ -1,6 +1,13 @@
 #include "ft_printf.h"
 #include <limits.h>
 
+void comprueba (void)
+{
+	system("leaks a.out");
+}
+
+
+
 int	main()
 {
 	char		*str;
@@ -10,6 +17,8 @@ int	main()
 	float		fnum;
 	int			inum;
 	unsigned	unum;
+
+	atexit(comprueba);
 
 	str = "Hola, me llamo Halfonso";
 	strn = NULL;
