@@ -12,10 +12,6 @@
 
 NAME = libftprintf.a
 
-#DEPS_DIR = Libft
-
-#DEPS_LIB = libft.a
-
 DEPS = Libft/libft.a
 
 CC = clang
